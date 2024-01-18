@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Izza My Shop!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+        .w3-bar-block .w3-bar-item {padding:20px}
+        </style>
+    </head>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-top w3-animate-left" style="display:none;z-index:3;width:14%; min-width: 200px" id="mySidebar">
+    <div class="w3-container">
+        <div class="w3-button w3-padding-16 w3-right w3-center" style="font-size:x-large;" onclick="w3_close()">☰</div><br><br><br>
+        <div class="w3-bar-block w3-center">
+            <a href="#items" onclick="w3_close()" class="w3-bar-item w3-button w3-padding" style="font-size: larger">ITEMS</a> 
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding" style="font-size: larger">ABOUT</a> 
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding" style="font-size: larger">CONTACT</a> 
+        </div>
+    </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Top menu -->
+<div class="w3-top">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+        <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+        <div class="w3-center w3-padding-16">Izza My Shop!</div>
+    </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:50px">
+
+    <!-- Filter -->
+    <div class="w3-center w3-padding-16" id="items">
+        <div id="myBtnContainer">
+            <button class="w3-button w3-black" onclick="filterSelection('all')">ALL</button>
+            <button class="w3-button w3-white" onclick="filterSelection('design')"><i class="w3-margin-center"></i>Design</button>
+            <button class="w3-button w3-white" onclick="filterSelection('watercolor')"><i class="w3-margin-center"></i>Watercolor</button>
+            <button class="w3-button w3-white" onclick="filterSelection('scrapbook')"><i class="w3-margin-center"></i>Scrapbook</button>
+            <button class="w3-button w3-white" onclick="filterSelection('ceramics')"><i class="w3-margin-center"></i>Ceramics</button>
+        </div>
+    </div>
+
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+
+        <a href="item_1.html">
+            <div class="filterDiv watercolor">
+                <div class="w3-quarter">
+                    <img src="https://www.w3schools.com/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
+                    <h3>The Perfect Sandwich, A Real NYC Classic</h3>
+                    <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                </div>
+            </div>
+        </a>
+
+        <div class="filterDiv watercolor">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/steak.jpg" alt="Steak" style="width:100%">
+                <h3>Let Me Tell You About This Steak</h3>
+                <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+        </div>
+
+        <div class="filterDiv watercolor">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/cherries.jpg" alt="Cherries" style="width:100%">
+                <h3>Cherries, interrupted</h3>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                <p>What else?</p>
+            </div>
+        </div>
+
+        <div class="filterDiv watercolor">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/wine.jpg" alt="Pasta and Wine" style="width:100%">
+                <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+        </div>
+
+    </div>
+  
+    <!-- Second Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+
+        <div class="filterDiv ceramics">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/popsicle.jpg" alt="Popsicle" style="width:100%">
+                <h3>All I Need Is a Popsicle</h3>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+        </div>
+
+        <div class="filterDiv ceramics">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/salmon.jpg" alt="Salmon" style="width:100%">
+                <h3>Salmon For Your Skin</h3>
+                <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+        </div>
+
+        <div class="filterDiv ceramics">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
+                <h3>The Perfect Sandwich, A Real Classic</h3>
+                <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+        </div>
+
+        <div class="filterDiv ceramics">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/croissant.jpg" alt="Croissant" style="width:100%">
+                <h3>Le French</h3>
+                <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+        </div>
+
+    </div>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+    <div class="w3-container w3-padding-32 w3-center">  
+        <h3>About Me, The Food Man</h3><br>
+        <img src="https://www.w3schools.com/w3images/chef.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+        <div class="w3-padding-32">
+            <h4><b>I am Who I Am!</b></h4>
+            <h6><i>With Passion For Real, Good Food</i></h6>
+            <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        </div>
+    </div>
+
+  <hr id="contact">
+
+  <!-- Contact Section -->
+    <div class="w3-container w3-padding-32 w3-center">  
+        <h3>Contact info</h3><br>
+    </div>
+  <hr>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// filter items
+filterSelection("all")
+function filterSelection(c) {
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    if (x[i].className.indexOf(c) > -1) {
+      x[i].style.display = 'block';
+    } else {
+      x[i].style.display = 'none';
+    }
+  }  
+}
+
+// highlight chosen filter buttons
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("w3-button w3-white");
+var curr = btnContainer.getElementsByClassName("w3-button w3-black");
+curr[0].addEventListener("click", function(){
+    var current = document.getElementsByClassName("w3-button w3-black");
+    current[0].className = "w3-button w3-white";
+    this.className = "w3-button w3-black";
+  });
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("w3-button w3-black");
+    current[0].className = "w3-button w3-white";
+    this.className = "w3-button w3-black";
+  });
+}
+
+</script>
+
+</body>
+</html>
